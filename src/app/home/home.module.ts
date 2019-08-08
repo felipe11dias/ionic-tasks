@@ -5,10 +5,14 @@ import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 
 import { HomePage } from './home.page';
+import { AddingModalPage } from '../adding-modal/adding-modal.page';
+import { RemoveModalPage } from '../remove-modal/remove-modal.page';
+import { UpdateModalPage } from '../update-modal/update-modal.page';
+
 
 @NgModule({
   imports: [
-    CommonModule,
+CommonModule,
     FormsModule,
     IonicModule,
     RouterModule.forChild([
@@ -18,6 +22,7 @@ import { HomePage } from './home.page';
       }
     ])
   ],
-  declarations: [HomePage]
+  entryComponents: [AddingModalPage, RemoveModalPage, UpdateModalPage],
+  declarations: [HomePage, AddingModalPage, RemoveModalPage, UpdateModalPage]
 })
 export class HomePageModule {}

@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-toolbar>
+      <ion-title style="float: left; padding: 15px;">
+        New Task
+      </ion-title>
+      <ion-icon name="close-circle-outline" (click)="closeModal()" style="float: right; height: 50px; width: 50px">Close</ion-icon>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <form (submit)="postTask(title, done)" >
+    <ion-label>Title</ion-label>
+    <ion-input type="text" [(ngModel)]="title" name="title"></ion-input><br/>
+    <ion-label>Done</ion-label>
+    <ion-radio [(ngModel)]="done" name="done" value="true"></ion-radio><br/>
+    <ion-button (click)="showToast()" type="submit">Create</ion-button>
+  </form>
+
+</ion-content>

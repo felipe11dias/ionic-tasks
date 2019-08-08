@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-toolbar>
+      <ion-title style="float: left; padding: 15px;">
+        Remove Task
+      </ion-title>
+      <ion-icon name="close-circle-outline" (click)="closeModal()" style="float: right; height: 50px; width: 50px">Close</ion-icon>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+      <form (submit)="remove( id )">
+        <ion-label>
+          Enter the task id you want to remove:
+        </ion-label>
+        <ion-input type="number" [(ngModel)]="id" name="id" value="0" required></ion-input><br/>
+        <ion-button type="submit">Remove</ion-button>
+      </form>
+</ion-content>

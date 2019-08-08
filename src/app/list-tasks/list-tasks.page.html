@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title style="float: left; padding: 15px;">ListTasks</ion-title>
+    <a [routerLink]="['/home']" style="color: #333;"><ion-icon name="close-circle-outline" style="float: right; height: 50px; width: 50px">Close</ion-icon></a>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+    <a class="nav-link" routerLink="/home" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+      Home
+    </a>
+    <ion-list-header>
+      <ion-label color="primary" style="font-size: 24px">Tasks</ion-label>
+    </ion-list-header>
+    <ion-list *ngFor="let task of tasks">
+        <ion-item>
+
+          <ion-label>
+            {{ task.id }}
+          </ion-label>
+          <ion-button (click)="openShowModal( task.id )" color="dark" style="max-width: 150px; min-width: 150px;">
+            <ion-label>
+              {{ task.title }}
+            </ion-label>
+          </ion-button>
+          <ion-label>
+            {{ task.done }}
+          </ion-label>
+
+        </ion-item>
+    </ion-list>
+
+</ion-content>

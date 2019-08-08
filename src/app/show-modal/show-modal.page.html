@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar>
+      <ion-title style="float: left; padding: 15px;">
+        Show Task
+      </ion-title>
+      <ion-icon name="close-circle-outline" (click)="closeModal()" style="float: right; height: 50px; width: 50px">Close</ion-icon>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding *ngIf="task">
+  <ion-label>
+    Id: {{task.id}}
+  </ion-label><br/>
+  <ion-label>
+    Title: {{task.title}}
+  </ion-label><br/>
+  <ion-label>
+    Done: {{task.done}}
+  </ion-label><br/>
+
+  <ion-button (click)="closeModal()">
+    Fechar
+  </ion-button>
+</ion-content>
